@@ -1,0 +1,106 @@
+/*Importando fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 30px;
+    color: #fff;
+    background-color: #151219;
+    width: 100vw;
+}
+
+/* Centralizar conteúdo */
+
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Header*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+header img{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    margin-bottom: 30px;    
+}
+header p{
+    font-size: 120%;
+    color: #c0c0c0;
+}
+
+main section {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+main section .card {
+  background: #494949;
+  border: 2px solid none;
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  transition: all 200ms ease-in-out;
+}
+
+main section .card:hover {
+  border: 2px solid #FFFFFF ;
+}
+
+main section .card h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+main section .card img {
+  width: 25px;
+  height: 25px;
+}
+
+.card.linkedin {
+  background: rgb(111,139,231);
+  background: linear-gradient(90deg, rgba(111,139,231,1) 0%, rgba(47,41,157,1) 100%);
+}
+
+.card.github {
+  background: linear-gradient(58deg, #8a8a8a 8%, #313131 98%);
+}
+
+.card.fiverr {
+  background: linear-gradient(58deg, #1DBF73 8%, #0c643b 98%);
+}
+
+.card.site {
+  background: linear-gradient(58deg, #722CD8 8%, #9A56FD 98%);
+}
+
+
+@media(max-width: 900px) {
+  main section {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+}
