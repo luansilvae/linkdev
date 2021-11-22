@@ -7,19 +7,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+ul {
+  list-style: none;
+}
+
 body{
-    padding: 30px;
     color: #fff;
     background-color: #151219;
     width: 100vw;
-}
-
-/* Centralizar conteúdo */
-
-html {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /*Header*/
@@ -28,34 +24,37 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 30px;
+    padding: 20px 20px 0 20px;
 }
+
 header img{
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    margin-bottom: 30px;    
+    margin-bottom: 20px;    
 }
 header p{
     font-size: 120%;
     color: #c0c0c0;
 }
 
-main section {
-  width: 50%;
+main ul {
+  max-width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px
 }
 
-main section .card {
-  background: #494949;
-  border: 2px solid none;
+ul li .card {
   width: 100%;
-  height: 100px;
+  background: #494949;
   border-radius: 4px;
   text-decoration: none;
+  padding: 10px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,17 +64,17 @@ main section .card {
   transition: all 200ms ease-in-out;
 }
 
-main section .card:hover {
-  border: 2px solid #FFFFFF ;
+.card:hover {
+  filter: brightness(90%);
 }
 
-main section .card h3 {
+.card h3 {
   font-weight: 400;
   font-size: 18px;
   color: #FFFFFF;
 }
 
-main section .card img {
+.card img {
   width: 25px;
   height: 25px;
 }
@@ -95,12 +94,4 @@ main section .card img {
 
 .card.site {
   background: linear-gradient(58deg, #722CD8 8%, #9A56FD 98%);
-}
-
-
-@media(max-width: 900px) {
-  main section {
-    width: 80%;
-    grid-template-columns: 1fr;
-  }
 }
